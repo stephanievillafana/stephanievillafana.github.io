@@ -1,0 +1,602 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stephanie Villafana — Analytics, business intelligence, revenue operations, and data-driven business strategy.">
+  <title>Stephanie Villafana | Analytics & Business Strategy</title>
+
+  <style>
+    :root {
+      --ivory: #f8f6f1;
+      --navy: #14283f;
+      --ink: #202b36;
+      --muted: #66717b;
+      --gold: #b28b57;
+      --line: #dedbd3;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 26px 0;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-family: Georgia, serif;
+      font-size: 23px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .hero {
+      padding: 105px 0 95px;
+      max-width: 960px;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(44px, 6.5vw, 78px);
+      letter-spacing: -2.5px;
+      color: var(--navy);
+      margin: 22px 0 28px;
+    }
+
+    .hero p {
+      max-width: 690px;
+      font-size: 19px;
+      color: var(--muted);
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 27px;
+      background: var(--navy);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 13px;
+      margin-top: 22px;
+      transition: background 0.2s;
+    }
+
+    .button:hover {
+      background: #304d6b;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .hero-tag {
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 6px 15px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+      margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+      font-size: 34px;
+      color: var(--navy);
+    }
+
+    .featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--navy);
+      color: var(--white);
+      min-height: 420px;
+    }
+
+    .feature-content {
+      padding: 48px;
+    }
+
+    .feature-content h3 {
+      font-size: clamp(32px, 4vw, 48px);
+      margin: 22px 0;
+    }
+
+    .feature-content p {
+      color: #c7d2de;
+      font-size: 15px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 25px;
+    }
+
+    .tag {
+      border: 1px solid #52677e;
+      padding: 5px 12px;
+      font-size: 11px;
+      color: #e2e8ef;
+    }
+
+    .feature-visual {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+      background: #1b344f;
+      border-left: 1px solid #38506a;
+    }
+
+    .visual-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #b9c9da;
+    }
+
+    .visual-title {
+      font-family: Georgia, serif;
+      font-size: 34px;
+      line-height: 1.2;
+      margin: 20px 0 30px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .metric {
+      background: #25425e;
+      padding: 20px 16px;
+      border-top: 2px solid var(--gold);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 17px;
+      font-weight: normal;
+      margin-bottom: 5px;
+    }
+
+    .metric span {
+      font-size: 11px;
+      color: #bdcddd;
+    }
+
+    .project-note {
+      font-size: 12px;
+      color: #b9c9da;
+      margin-top: 24px;
+    }
+
+    .section {
+      padding: 85px 0 0;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .project-card {
+      border: 1px solid var(--line);
+      padding: 35px;
+      background: var(--white);
+    }
+
+    .project-card h3 {
+      font-size: 30px;
+      margin: 15px 0;
+      color: var(--navy);
+    }
+
+    .project-card p {
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .kbeauty {
+      background: #f6e5ed;
+      border-color: #ead3e0;
+    }
+
+    .kbeauty .eyebrow {
+      color: #95647d;
+    }
+
+    .kbeauty h3 {
+      color: #573a50;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 60px;
+      padding: 40px 0 75px;
+    }
+
+    .about h3 {
+      font-size: 42px;
+      color: var(--navy);
+    }
+
+    .about p {
+      margin-top: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    footer {
+      background: var(--navy);
+      color: #d1dae4;
+      padding: 45px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+
+    @media (max-width: 750px) {
+      .hero {
+        padding: 65px 0;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .featured,
+      .project-grid,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-content,
+      .feature-visual {
+        padding: 30px;
+      }
+
+      .feature-visual {
+        border-left: none;
+        border-top: 1px solid #38506a;
+      }
+
+      .section {
+        padding-top: 55px;
+      }
+
+      .about {
+        gap: 20px;
+      }
+
+      .section-heading h2 {
+        font-size: 28px;
+      }
+
+      .nav-links {
+        gap: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="container">
+      <a class="brand" href="/">Stephanie Villafana</a>
+
+      <div class="nav-links">
+        <a href="#featured">Portfolio</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Connect</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+
+      <div class="eyebrow">
+        Business Strategy &bull; Analytics &bull; Data Storytelling
+      </div>
+
+      <h1>I turn business questions into data-driven insights and digital experiences.</h1>
+
+      <p>
+        Combining commercial experience, analytical thinking,
+        and creative design to uncover opportunities,
+        communicate insights, and support better business
+        decisions.
+      </p>
+
+      <a class="button" href="#featured">
+        Explore my work &rarr;
+      </a>
+
+      <div class="hero-tags">
+        <span class="hero-tag">Business Intelligence</span>
+        <span class="hero-tag">Revenue Operations</span>
+        <span class="hero-tag">Data Storytelling</span>
+      </div>
+
+    </section>
+
+    <section id="featured">
+
+      <div class="section-heading">
+        <h2>Featured Project</h2>
+        <span class="eyebrow">Business Intelligence</span>
+      </div>
+
+      <article class="featured">
+
+        <div class="feature-content">
+
+          <div class="eyebrow">Revenue Operations</div>
+
+          <h3>Sales Pipeline Health &amp; Revenue Performance</h3>
+
+          <p>
+            An analytical business case exploring sales
+            performance, pipeline health, and opportunities
+            to improve revenue outcomes using the Maven
+            Analytics CRM Sales Opportunities dataset.
+          </p>
+
+          <div class="tags">
+            <span class="tag">CRM Analytics</span>
+            <span class="tag">Sales Operations</span>
+            <span class="tag">Revenue Performance</span>
+          </div>
+
+          <p class="project-note">
+            Full case study and dashboard coming soon.
+          </p>
+
+        </div>
+
+        <div class="feature-visual">
+
+          <div class="visual-label">
+            Areas of Analysis
+          </div>
+
+          <div class="visual-title">
+            Beyond the numbers.<br>
+            Into the business.
+          </div>
+
+          <div class="metric-grid">
+
+            <div class="metric">
+              <strong>Revenue</strong>
+              <span>Performance trends</span>
+            </div>
+
+            <div class="metric">
+              <strong>Pipeline</strong>
+              <span>Opportunity health</span>
+            </div>
+
+            <div class="metric">
+              <strong>Sales Teams</strong>
+              <span>Agent performance</span>
+            </div>
+
+            <div class="metric">
+              <strong>Strategy</strong>
+              <span>Business recommendations</span>
+            </div>
+
+          </div>
+
+          <div class="project-note">
+            Source: Maven Analytics CRM Sales Opportunities
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="section" id="projects">
+
+      <div class="section-heading">
+        <h2>Explore More Projects</h2>
+        <span class="eyebrow">The Portfolio</span>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card kbeauty">
+
+          <div class="eyebrow">Upcoming Project</div>
+
+          <h3>The Business of K-Beauty</h3>
+
+          <p>
+            An upcoming exploration of the Korean beauty
+            industry, consumer insights, and the business
+            behind a global skincare phenomenon.
+          </p>
+
+          <p>Market Research &bull; Consumer Analytics</p>
+
+        </article>
+
+        <article class="project-card">
+
+          <div class="eyebrow">In Development</div>
+
+          <h3>More perspectives. More possibilities.</h3>
+
+          <p>
+            Future analytical projects exploring business
+            strategy, international markets, operational
+            performance, and the stories behind the data.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section class="section" id="about">
+
+      <div class="section-heading">
+        <h2>About</h2>
+        <span class="eyebrow">Behind the Analysis</span>
+      </div>
+
+      <div class="about">
+
+        <h3>Business experience.<br>Analytical curiosity.</h3>
+
+        <div>
+
+          <p>
+            My professional background in sales and business
+            development has shaped how I approach analytics:
+            understanding the business question first,
+            examining the evidence, and translating findings
+            into meaningful recommendations.
+          </p>
+
+          <p>
+            I am developing my analytical expertise through
+            the Google Data Analytics Professional Certificate
+            and hands-on projects focused on business
+            intelligence, CRM analytics, sales performance,
+            and revenue operations.
+          </p>
+
+          <p>
+            This portfolio documents that journey through
+            practical business cases, data visualization,
+            analytical reasoning, and the decisions behind
+            each project.
+          </p>
+
+          <p>
+            I am also exploring web development and digital
+            data storytelling as I build this portfolio,
+            bringing analytical insights to life through
+            thoughtful design and engaging web experiences.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="contact">
+
+    <div class="container footer-content">
+
+      <div>
+        <strong>Stephanie Villafana</strong><br>
+        Analytics &amp; Business Strategy
+      </div>
+
+      <a href="https://github.com/stephanievillafana">
+        Connect on GitHub &rarr;
+      </a>
+
+      <div>&copy; 2026 Stephanie Villafana</div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
