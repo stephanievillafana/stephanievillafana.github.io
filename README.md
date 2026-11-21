@@ -1,2 +1,1 @@
-# stephanievillafana.github.io
-Professional analytics portfolio featuring business intelligence, revenue operations, and data-driven business strategy.
+LOCAL REVIEW ONLY — NOT PUBLISHED. Open index.html after extracting the ZIP. Project 001 methodology charts now appear in SHARE, with the tall revenue ranking in a scrollable container. Preparation Summary retained. Existing project files preserved.
